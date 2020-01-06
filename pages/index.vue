@@ -1,19 +1,33 @@
 <template>
-  <div>
-    carousel
+  <div class="carousel-wrapper">
+    <carousel v-bind="options">
+      <slide v-for="i in 5" :key="i" class="img-warpper">
+        <img :src="`https://picsum.photos/200/100?random=${i}`" />
+      </slide>
+    </carousel>
   </div>
 </template>
 
 <script>
 export default {
-  components: {}
+  data() {
+    return {
+      options: {
+        loop: true,
+        perPage: 3
+      }
+    }
+  }
 }
 </script>
 
-<style>
+<style lang="scss">
 .carousel-wrapper {
   padding: 40px;
   height: 150px;
+  .VueCarousel-slide {
+    text-align: center;
+  }
 }
 .img-warpper img {
   margin: auto;
