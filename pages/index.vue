@@ -1,7 +1,7 @@
 <template>
   <div class="carousel-wrapper">
     <carousel v-bind="options">
-      <slide v-for="i in 5" :key="i" class="img-warpper">
+      <slide v-for="i in 5" :key="i" class="img-wrapper">
         <img :src="`https://picsum.photos/200/100?random=${i}`" />
       </slide>
     </carousel>
@@ -29,7 +29,7 @@ export default {
     text-align: center;
   }
 }
-.img-warpper img {
+.img-wrapper img {
   margin: auto;
   width: 200px;
   height: 100px;
