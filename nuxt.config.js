@@ -46,6 +46,18 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, ctx) {},
+    babel: {
+      presets: [
+        [
+          '@babel/preset-env',
+          {
+            useBuiltIns: 'entry',
+            corejs: 3
+          }
+        ]
+      ],
+      plugins: ['@babel/transform-runtime']
+    }
   }
 }
