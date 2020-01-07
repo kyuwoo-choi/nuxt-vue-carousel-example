@@ -1,10 +1,12 @@
 <template>
   <div class="carousel-wrapper">
-    <carousel v-bind="options">
-      <slide v-for="i in 5" :key="i" class="img-wrapper">
-        <img :src="`https://picsum.photos/200/100?random=${i}`" />
-      </slide>
-    </carousel>
+    <client-only>
+      <carousel v-bind="options">
+        <slide v-for="i in 5" :key="i" class="img-wrapper">
+          <img :src="`https://picsum.photos/200/100?random=${i}`" />
+        </slide>
+      </carousel>
+    </client-only>
   </div>
 </template>
 
