@@ -16,7 +16,8 @@ export default {
     return {
       options: {
         loop: true,
-        perPage: 3
+        perPage: 3,
+        paginationEnabled: false
       }
     }
   }
